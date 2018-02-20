@@ -25,3 +25,4 @@ D:\coding\MovementEllipse\MovementEllipse\obj\Debug\MovementEllipse.Properties.R
 D:\coding\MovementEllipse\MovementEllipse\obj\Debug\MovementEllipse.csproj.GenerateResource.Cache
 D:\coding\MovementEllipse\MovementEllipse\obj\Debug\MovementEllipse.exe
 D:\coding\MovementEllipse\MovementEllipse\obj\Debug\MovementEllipse.pdb
+D:\coding\MovementEllipse\MovementEllipse\obj\Debug\MovementEllipse.csproj.CoreCompileInputs.cache

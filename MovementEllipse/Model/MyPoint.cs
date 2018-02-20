@@ -7,11 +7,17 @@ namespace MovementEllipse.Model
 {
     public class MyPoint : INotifyPropertyChanged
     {
-        private double _x;
-        private double _y;
+        private double _x;//Axis of abscissa
+        private double _y;//Axis of ordinates
 
+        /// <summary>
+        /// Call back evant
+        /// </summary>
         public EventHandler ChangeProperty;
 
+        /// <summary>
+        /// Adsciss property
+        /// </summary>
         public double X
         {
             get
@@ -27,6 +33,9 @@ namespace MovementEllipse.Model
             }
         }
 
+        /// <summary>
+        /// Ordinate property
+        /// </summary>
         public double Y
         {
             get
@@ -42,12 +51,17 @@ namespace MovementEllipse.Model
             }
         }
 
+        /// <summary>
+        /// Call back function
+        /// </summary>
         public void Change()
         {
             RaiseCnageProperty( );
         }
 
-
+        /// <summary>
+        /// Invoke method
+        /// </summary>
         protected virtual void RaiseCnageProperty()
         {
             ChangeProperty?.Invoke(this, EventArgs.Empty);

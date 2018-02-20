@@ -9,6 +9,9 @@ namespace MovementEllipse.ViewModel
     {
         private MyPoint _point;
 
+        /// <summary>
+        /// X slider property
+        /// </summary>
         public double X
         {
             get { return  _point.X; }
@@ -19,6 +22,9 @@ namespace MovementEllipse.ViewModel
             }
         }
 
+        /// <summary>
+        /// Y slider property
+        /// </summary>
         public double Y
         {
             get { return _point.Y; }
@@ -29,6 +35,10 @@ namespace MovementEllipse.ViewModel
             }
         }
 
+        /// <summary>
+        /// Construction
+        /// </summary>
+        /// <param name="point">Point instance</param>
         public MainWindowViewModel(MyPoint point)
         {
             if (point == null)
@@ -38,6 +48,11 @@ namespace MovementEllipse.ViewModel
             _point.PropertyChanged += _point_PropertyChanged;
         }
 
+        /// <summary>
+        /// Call back handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _point_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             onPropertyChanged("X");

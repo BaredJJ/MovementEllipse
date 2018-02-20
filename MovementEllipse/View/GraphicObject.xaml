@@ -14,21 +14,24 @@
             <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="5"/>
             <RowDefinition/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="5"/>
         </Grid.RowDefinitions>
-        <Canvas x:Name="MoveCanvas" Height="300" Width="300" Grid.Column="1" Grid.Row="1">
+        <Border BorderThickness="5" BorderBrush="Bisque" Background="FloralWhite"
+                HorizontalAlignment="Left" VerticalAlignment="Top" Width="330" Height="330" Grid.Column="1" Grid.Row="1" Margin="22,10,0,0">
+            <Canvas x:Name="MoveCanvas" Grid.Column="1" Grid.Row="1">
 
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="MouseMove">
-                    <i:InvokeCommandAction Command="{Binding EllipseMove}"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseMove">
+                        <i:InvokeCommandAction Command="{Binding EllipseMove}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
 
-            <Ellipse x:Name="ElipseMove" Width="20" Height="20" Fill="Red"
+                <Ellipse x:Name="ElipseMove" Width="20" Height="20" Fill="Red"
                      Canvas.Top="{Binding X, UpdateSourceTrigger=PropertyChanged}" 
                      Canvas.Left="{Binding Y, UpdateSourceTrigger=PropertyChanged}"/>
-        </Canvas>
+            </Canvas>
+        </Border>
     </Grid>
 </Window>
