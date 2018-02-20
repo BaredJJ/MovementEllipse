@@ -1,0 +1,34 @@
+﻿<Window x:Class="MovementEllipse.View.GraphicObject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:local="clr-namespace:MovementEllipse.View"
+        mc:Ignorable="d"
+        Title="GraphicObject" Height="400" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Canvas x:Name="MoveCanvas" Height="300" Width="300" Grid.Column="1" Grid.Row="1">
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseMove">
+                    <i:InvokeCommandAction Command="{Binding EllipseMove}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+            <Ellipse x:Name="ElipseMove" Width="20" Height="20" Fill="Red"
+                     Canvas.Top="{Binding X, UpdateSourceTrigger=PropertyChanged}" 
+                     Canvas.Left="{Binding Y, UpdateSourceTrigger=PropertyChanged}"/>
+        </Canvas>
+    </Grid>
+</Window>
