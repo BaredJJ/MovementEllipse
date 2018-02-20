@@ -14,7 +14,7 @@ namespace MovementEllipse.ViewModel
         /// <summary>
         /// Top property
         /// </summary>
-        public double X
+        public double Left
         {
             get { return _point.X; }
             set {
@@ -30,7 +30,7 @@ namespace MovementEllipse.ViewModel
         /// <summary>
         /// Left propery
         /// </summary>
-        public double Y
+        public double Top
         {
             get { return _point.Y; }
             set {
@@ -67,8 +67,8 @@ namespace MovementEllipse.ViewModel
                 {
                     FrameworkElement element = obj as FrameworkElement;
                     Point point = Mouse.GetPosition(element);
-                    X = point.X - 35;
-                    Y = point.Y - 35;
+                    Left = point.X - 35;
+                    Top = point.Y - 35;
                 });
             }
         }
@@ -80,8 +80,8 @@ namespace MovementEllipse.ViewModel
         /// <param name="e"></param>
         private void _point_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            onPropertyChanged("X");
-            onPropertyChanged("Y");
+            onPropertyChanged("Left");
+            onPropertyChanged("Top");
         }
 
         /// <summary>

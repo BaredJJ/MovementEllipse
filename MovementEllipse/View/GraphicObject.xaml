@@ -6,7 +6,7 @@
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:local="clr-namespace:MovementEllipse.View"
         mc:Ignorable="d"
-        Title="GraphicObject" Topmost="True" Height="400" Width="400">
+        Title="GraphicObject" WindowStyle="None" WindowStartupLocation="Manual" Top="80" Left="135" Topmost="True" Height="400" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5"/>
@@ -25,8 +25,8 @@
 
 
                 <Ellipse x:Name="ElipseMove" Width="20" Height="20" Fill="Red"
-                     Canvas.Left="{Binding X, UpdateSourceTrigger=PropertyChanged}" 
-                     Canvas.Top="{Binding Y, UpdateSourceTrigger=PropertyChanged}">
+                     Canvas.Left="{Binding Left, UpdateSourceTrigger=PropertyChanged}" 
+                     Canvas.Top="{Binding Top, UpdateSourceTrigger=PropertyChanged}">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="MouseMove">
                             <i:InvokeCommandAction Command="{Binding EllipseMove}"/>

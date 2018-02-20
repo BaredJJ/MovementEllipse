@@ -26,3 +26,4 @@ D:\coding\MovementEllipse\MovementEllipse\obj\Debug\MovementEllipse.csproj.Gener
 D:\coding\MovementEllipse\MovementEllipse\obj\Debug\MovementEllipse.exe
 D:\coding\MovementEllipse\MovementEllipse\obj\Debug\MovementEllipse.pdb
 D:\coding\MovementEllipse\MovementEllipse\obj\Debug\MovementEllipse.csproj.CoreCompileInputs.cache
+D:\coding\MovementEllipse\MovementEllipse\obj\Debug\App.baml

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovementEllipse"
         mc:Ignorable="d"
-        Title="SliderBar" Topmost="False" Height="490" Width="470">
+        Title="SliderBar" Topmost="False" WindowStartupLocation="Manual" Top="40" Left="80" Height="490" Width="470">
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -24,8 +24,8 @@
         </Grid.RowDefinitions>
 
         <Border BorderThickness="4" BorderBrush="Black" Grid.Column="2" Grid.Row="1"/>
-        <Slider Name="xSlider" Grid.Column="1" Grid.Row="1" Margin="5" Orientation="Vertical" Value="{Binding X, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Minimum="0" Maximum="300"/>
-        <Slider Name="ySlider" Grid.Column="2" Grid.Row="2" Margin="5" Value="{Binding Y, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Minimum="0" Maximum="300"/>
+        <Slider Name="xSlider" Grid.Column="1" Grid.Row="1" Margin="5" Orientation="Vertical" Value="{Binding Y, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Minimum="0" Maximum="300"/>
+        <Slider Name="ySlider" Grid.Column="2" Grid.Row="2" Margin="5" Value="{Binding X, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Minimum="0" Maximum="300"/>
 
     </Grid>
 </Window>
